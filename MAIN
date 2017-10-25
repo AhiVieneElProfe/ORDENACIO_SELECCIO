@@ -1,0 +1,25 @@
+#include <iostream>
+#include <stdio.h>
+
+int main(){
+	int vector [5]= {75 , 48 , 45 , 2 , 5};
+	int i, menor, temp;
+	for(i=0; i<5; i++){
+		printf("%d\n", vector[i]);
+	}
+	
+	menor = vector[i];
+	
+	for(i=0; i<2; i++){
+		menor = vector[i];
+		for(j=1; j<5; j++){
+			if(vector[i] > ventor[j]){
+				aux = ventor[j]	
+			}else{
+				break;
+			}
+		}
+	}
+	
+}
+
