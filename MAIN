@@ -4,19 +4,28 @@
 #include <stdlib.h>
 
 
-//int main(){
-int Ordenamiento(){
-	
-	int vector [5]= {4 , 9 , 12 , 11 , 7};
+int main(){
+	int n;
+	int vector[n];
 	int i, menor, temp, j;
-	for(i=0; i<5; i++){
+	
+	printf("Tamaño del vector:");
+	scanf("%d", &n);
+		
+    time_t t;
+   
+    /* Intializes random number generator */
+   srand((unsigned) time(&t));
+   
+	for(i=0; i<n; i++){
+		vector[i]= rand() % 100;
 		printf("%d\n", vector[i]);
 	}
 	
-	
-	for(i=0; i<4; i++){
+	/*Ordenar el vector*/
+	for(i=0; i<n; i++){
 		menor = i;
-		for(j= i+1; j<5; j++){
+		for(j= i+1; j<n; j++){
 			if(vector[j] < vector[menor]){
 				menor = j;
 			}
@@ -30,7 +39,8 @@ int Ordenamiento(){
 
 	}
 	
-	for(i=0; i<5; i++){
+	/*Imprimir vector ordenado*/
+	for(i=0; i<n; i++){
 		printf("\n%d\n", vector[i]);
 	}
 	
