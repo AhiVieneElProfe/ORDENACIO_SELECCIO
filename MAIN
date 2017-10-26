@@ -1,25 +1,37 @@
 #include <iostream>
 #include <stdio.h>
+#include <time.h>
+#include <stdlib.h>
 
-int main(){
-	int vector [5]= {75 , 48 , 45 , 2 , 5};
-	int i, menor, temp;
+
+//int main(){
+int Ordenamiento(){
+	
+	int vector [5]= {4 , 9 , 12 , 11 , 7};
+	int i, menor, temp, j;
 	for(i=0; i<5; i++){
 		printf("%d\n", vector[i]);
 	}
 	
-	menor = vector[i];
 	
-	for(i=0; i<2; i++){
-		menor = vector[i];
-		for(j=1; j<5; j++){
-			if(vector[i] > ventor[j]){
-				aux = ventor[j]	
-			}else{
-				break;
+	for(i=0; i<4; i++){
+		menor = i;
+		for(j= i+1; j<5; j++){
+			if(vector[j] < vector[menor]){
+				menor = j;
 			}
+			
 		}
+		if(i!=menor){
+			temp = vector[i];
+		    vector[i] = vector[menor];
+		    vector[menor] = temp; 
+		}
+
+	}
+	
+	for(i=0; i<5; i++){
+		printf("\n%d\n", vector[i]);
 	}
 	
 }
-
